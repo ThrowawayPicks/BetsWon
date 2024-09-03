@@ -16,11 +16,34 @@
 
         header {
             width: 100%;
-            text-align: center;
             background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
             color: #fff;
-            padding: 20px 0;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .title {
+            color: #fff;
             font-size: 2em;
+            margin: 10px 0;
         }
 
         .gallery {
@@ -41,9 +64,12 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            header {
+            .title {
                 font-size: 1.5em;
-                padding: 15px 0;
+            }
+
+            nav a {
+                font-size: 1em;
             }
 
             .gallery {
@@ -52,9 +78,8 @@
         }
 
         @media (max-width: 480px) {
-            header {
+            .title {
                 font-size: 1.2em;
-                padding: 10px 0;
             }
         }
     </style>
@@ -62,8 +87,13 @@
 <body>
 
 <header>
-    Winning Tickets
+    <nav>
+        <a href="index.html">Winning Tickets</a>
+        <a href="losses.html">Losing Tickets</a>
+    </nav>
+    <div class="title">Winning Tickets</div>
 </header>
+
 
 <div class="gallery">
     <!-- Add your screenshot URLs here -->
